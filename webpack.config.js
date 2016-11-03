@@ -1,3 +1,5 @@
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 module.exports = {
 
   // the main entry of our app
@@ -24,5 +26,10 @@ module.exports = {
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
-  }
+  },
+
+  plugins: [
+    // https://www.npmjs.com/package/webpack-bundle-analyzer
+    new BundleAnalyzerPlugin()
+  ]
 }
